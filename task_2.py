@@ -4,7 +4,7 @@ class Tester:
         self.name = name # здесь тоже добавил self, т.к. через него будем обращаться к экземпляру класса
         self.deadline = deadline # и здесь добавил
 
-    def work_hard(self, deadline=True):
+    def work_hard(self, deadline):
         if deadline: # и здесь добавил
             print(self.name, 'Что ж, ещё часок поработаю!')
         else:
