@@ -2,19 +2,16 @@ from pprint import pprint # импортировал функцию pprint дл�
 
 class TestCase(): 
 
-    steps = {} # инициализировал атрибут для сбора шагов и их значений
-    result = None # инициализировал атрибут для сбора результатов
-
     def __init__(self):
-        pass
+        self.steps = {} # инициализировал атрибут для сбора шагов и их значений
+        self.result = None # инициализировал атрибут для сбора результатов
 
     def set_step(self, step_number, step_text): # метод добавляет в словарь steps шаг тест-кейса по ключу
         self.steps[step_number] = step_text
-        print(self.steps)
 
     def delete_step(self, step_number): # метод удаляет в словарь steps шаг тест-кейса по ключу
-        del self.steps[step_number]
-        print(self.steps)
+        if step_number in self.steps:
+            del self.steps[step_number]
 
     def set_result(self, result): # метод добавляет ожидаемый результат
         self.result = result 
